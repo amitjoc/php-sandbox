@@ -3,7 +3,7 @@
 /** 
  * 
  * Singleton Database class with one-time configuration
- * Theri are also other ways to implement singleton with configuration check notes 
+ * There are also other ways to implement singleton with configuration check notes 
 */
 final class Database
 {

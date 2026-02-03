@@ -1,6 +1,5 @@
 <?php
 
-
 class Database 
 {
 
@@ -24,11 +23,8 @@ class Database
         if (!is_null(self::$dbInstance)) return self::$dbInstance;
         return self::$dbInstance = new self();
     }
-
-    
  
 }
-
 
 // Example 
 // Usage of Singleton Database class so we
