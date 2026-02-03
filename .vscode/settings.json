@@ -1,0 +1,9 @@
+{
+    "conventionalCommits.scopes": [
+        "design_pattern",
+        "interface",
+        "iterators",
+        "problems",
+        "php_spl"
+    ]
+}
