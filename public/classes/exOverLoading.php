@@ -32,6 +32,7 @@ class MyClassWithOverLoading
         }else {
             return (3.14 * $argument[0]);  // circle area
         }
+        return 1;
     }
 
 }
@@ -40,3 +41,5 @@ $obj = new MyClassWithOverLoading();
 echo 'Area of Square: ' .       $obj->area(2) . PHP_EOL;
 echo 'Area of Rectangle: ' .    $obj->area(2,8) . PHP_EOL;
 echo 'Area of Circle: '  .      $obj->circleArea(2) . PHP_EOL;
+
+// TODO: OverLOADING Example updated code with php 7 and php 8 match keyword
