@@ -4,6 +4,8 @@
         "interface",
         "iterators",
         "problems",
-        "php_spl"
+        "php_spl",
+        "php7_0",
+        "enum"
     ]
 }
