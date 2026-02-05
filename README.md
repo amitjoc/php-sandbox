@@ -12,6 +12,14 @@ composer require --dev phpunit/phpunit
 
 ## Core Php 
 
+### enum  
+This is `enum` base small project for learning.  
+- [TaskManager Project Folder](/public/php8_1/enum/)
+- [README for TaskManager](/public/php8_1/enum/enumREADME.md)  
+
+
+
+
 ### Interface
 
 ### Iterator
@@ -28,4 +36,3 @@ composer require --dev phpunit/phpunit
   - [x] `constructor()` is private no posibility of accidental `new`
   - [x] instance creation is safe due to `getInstance()` function 
   - [ ] but it is not  `clone` safe
-
