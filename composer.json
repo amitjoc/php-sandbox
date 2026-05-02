@@ -13,7 +13,6 @@
             "email": "amitjoc@gmail.com"
         }
     ],
-    "php": ">=8.0",
     "minimum-stability": "stable",
     "license": "MIT",
     "require": {
