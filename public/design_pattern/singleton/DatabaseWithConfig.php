@@ -21,7 +21,7 @@ final class Database
     public static function init(string $h, string $u, string $p, string $d): self
     {
         if (self::$initialized) {
-            throw new \RuntimeException('Already initialized!');
+            throw new \RuntimeException('Already initialized!', 3);
         }
         self::$instance = new self($h, $u, $p, $d);
         self::$initialized = true;
@@ -32,26 +32,13 @@ final class Database
     public static function getInstance(): self
     {
         if (!self::$initialized) {
-            throw new \RuntimeException('Call init() first!');
+            throw new \RuntimeException('Call init() first!', 1);
         }
         return self::$instance;
     }
 
     public function __clone()
     {
-        throw new \RuntimeException(__METHOD__.' Cloning is not allowed!');
+        throw new \RuntimeException(__METHOD__.' Cloning is not allowed!',2);
     }
-}
-
-$db1 = Database::init('localhost', 'root', 'password', 'testdb');
-$db2 = Database::getInstance();
-
-var_dump($db1 === $db2); // true
-
-try {
-    $db3 = Database::init('localhost2', 'root', 'password', 'testdb');
-    $db3Clone = clone $db1;
-    var_dump($db1 === $db3Clone); // true because clone is blocked
-} catch (\RuntimeException $e) {
-    echo "EXCEPTIONS_::".__LINE__ .'---'. $e->getMessage(); // Cloning is not allowed!
 }
