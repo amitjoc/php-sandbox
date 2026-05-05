@@ -49,4 +49,4 @@ jobs:
         run: composer audit
 
       - name: Run test suite
-        run: composer run-script test -- --verbose
+        run: composer run-script test
