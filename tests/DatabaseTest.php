@@ -1,10 +1,12 @@
 <?php
 
+namespace Tests;
+
 use PHPUnit\Framework\TestCase;
+use PhpSandbox\DesignPattern\Singleton\Database;
+use ReflectionClass;
 
-require_once __DIR__ . '/../public/design_pattern/singleton/DatabaseWithConfig.php';
-
-class DatabaseWithConfigTest extends TestCase
+class DatabaseTest extends TestCase
 {
     protected function tearDown(): void
     {
@@ -39,7 +41,7 @@ class DatabaseWithConfigTest extends TestCase
     public function testThrowsExceptionOnClone()
     {
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Database::__clone Cloning is not allowed!');
+        $this->expectExceptionMessage('PhpSandbox\DesignPattern\Singleton\Database::__clone Cloning is not allowed!');
         $db = Database::init('localhost', 'user', 'pass', 'db');
         $clone = clone $db;
     }

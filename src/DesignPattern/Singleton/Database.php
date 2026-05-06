@@ -1,5 +1,7 @@
 <?php
 
+namespace PhpSandbox\DesignPattern\Singleton;
+
 /** 
  * 
  * Singleton Database class with one-time configuration
